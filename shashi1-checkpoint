@@ -1,0 +1,388 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d2fe3a93-81c8-4aba-b3df-ca25828e1789",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l=[100,53,200,79,20,89,1007]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "6cfe506e-cc34-42cb-84fc-df92150cbb5c",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "even numbers:  [100, 200, 20]\n",
+      "odd numbers:  [53, 79, 89, 1007]\n"
+     ]
+    }
+   ],
+   "source": [
+    "l=[100,53,200,79,20,89,1007]\n",
+    "even=[num for num in l if num % 2 == 0]\n",
+    "odd=[num for num in l if  num % 2 != 0]\n",
+    "print(\"even numbers: \",even)\n",
+    "print(\"odd numbers: \",odd)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "51325749-3590-4940-908e-74edc7bde5ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Even Numbers: [100, 200, 20]\n"
+     ]
+    }
+   ],
+   "source": [
+    "even = []\n",
+    "for x in l:\n",
+    "    if x%2 == 0:\n",
+    "        even.append(x)\n",
+    "print(\"Even Numbers:\",even)        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "c41288dc-eaa1-422d-b2d6-bad1e363c95e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Odd Numbers: [53, 79, 89, 1007]\n"
+     ]
+    }
+   ],
+   "source": [
+    "odd = []\n",
+    "for o in l:\n",
+    "    if o%2 != 0:\n",
+    "        odd.append(o)\n",
+    "print(\"Odd Numbers:\",odd)        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "547df860-81f1-445b-a47b-1e9967bf3a08",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['apple', 10], ['banna', 5], ['cherry', 10], ['dragon', 10], ['grape', 9], ['apple', 20]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Update an quantity of an item (\"cherry\" to 10)\n",
+    "orders = [['apple',10],['banna',5],['cherry',7],['dragon',10],['grape',9],['apple',20]]\n",
+    "for each in orders:\n",
+    "    if each[0] == \"cherry\":\n",
+    "       each[1] = 10\n",
+    "print(orders)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "id": "3448a471-0692-4977-80e0-26f2bf2ed63e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['apple', 10], ['banna', 5], ['cherry', 7], ['dragon', 10], ['grape', 9], ['apple', 20], ['apple', 15]]\n",
+      "[45]\n"
+     ]
+    }
+   ],
+   "source": [
+    "orders = [['apple', 10], ['banna', 5], ['cherry', 7], ['dragon', 10], ['grape', 9], ['apple', 20]]\n",
+    "orders.append(['apple', 15])\n",
+    "apple_quantity = sum(order[1] for order in orders if order[0] == 'apple')\n",
+    "print(orders)\n",
+    "print([apple_quantity])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "93de92fe-4a78-4baa-9b39-c0facfd3a1ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[['apple', 10], ['banna', 5], ['cherry', 7], ['dragon', 10], ['grape', 9], ['apple', 20], ['apple', 15]]\n",
+      "[10, 20, 15]\n",
+      "45\n"
+     ]
+    }
+   ],
+   "source": [
+    "orders = [['apple',10],['banna',5],['cherry',7],['dragon',10],['grape',9],['apple',20]]\n",
+    "orders.append([\"apple\",15])\n",
+    "print(orders)\n",
+    "total = []\n",
+    "for each_item in orders:\n",
+    "    if each_item[0] == \"apple\":\n",
+    "       total.append(each_item[1])\n",
+    "print(total)\n",
+    "print(sum(total))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "bee7c76b-211c-492c-9293-6d85a0f95286",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(4, 10, 9, 'A', 9.81, False, (9-6j))\n",
+      "<class 'tuple'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#create a tuple\n",
+    "tup1 = (4,10,9,\"A\",9.81,False,9-6j)\n",
+    "print (tup1)\n",
+    "print (type(tup1))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "67de4626-c88c-410b-907a-1b5f2570194e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "tuple : (4, 10, 9, 'A', 9.81, False, (9-6j))\n",
+      "(9.81, False)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Slicing on tuple\n",
+    "tup1 = (4,10,9,\"A\",9.81,False,9-6j)\n",
+    "print (\"tuple :\",tup1)\n",
+    "print (tup1[4:6])\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "522ab56a-289a-493c-9ec3-70b17b4999d5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 73,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tup1.index(9-6j)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "id": "d92a0a9a-af11-4ad0-92e0-60a1162bc806",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 77,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tup2=(10,20,1,10,10,1,1,1,1,1,1,1,30,10)\n",
+    "tup2.count(1)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "id": "b8eaf425-ebce-48b8-adcd-34ef72c5b917",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12"
+      ]
+     },
+     "execution_count": 81,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tup2.index(30)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c47af1a4-54eb-4dce-a83a-1f9b33b65da4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "scores= {\"virat\": 90,\"rohit\": 100,\"rahul\": 10,\"hardik\": 9,\"gill\": 50,\"jadeja\": 70,\"siraz\": 80}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "df214608-b2cc-41bb-8c80-afff12dbc4af",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'virat': 90,\n",
+       " 'rohit': 100,\n",
+       " 'rahul': 10,\n",
+       " 'hardik': 9,\n",
+       " 'gill': 50,\n",
+       " 'jadeja': 70,\n",
+       " 'siraz': 80,\n",
+       " 'aswin': 15}"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores= {\"virat\": 90,\"rohit\": 100,\"rahul\": 10,\"hardik\": 9,\"gill\": 50,\"jadeja\": 70,\"siraz\": 80}\n",
+    "scores[\"aswin\"] = 15\n",
+    "scores\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "2c0061b0-662d-429f-91a1-dad87753d69f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'virat': 90,\n",
+       " 'rohit': 100,\n",
+       " 'rahul': 10,\n",
+       " 'hardik': 9,\n",
+       " 'gill': 50,\n",
+       " 'jadeja': 110,\n",
+       " 'siraz': 80,\n",
+       " 'Aswin': 15}"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.update({\"jadeja\":110})\n",
+    "scores\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "d9242b65-8701-4ede-a53e-8ad85b14f8e2",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'scores' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[7], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m scores\u001b[38;5;241m.\u001b[39msetdefault({\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mrahul\u001b[39m\u001b[38;5;124m\"\u001b[39m:\u001b[38;5;241m10\u001b[39m})\n\u001b[0;32m      2\u001b[0m scores\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'scores' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "scores.setdefault({\"rahul\":10})\n",
+    "scores\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "31b4a337-acfc-49b3-8114-8bb21765e987",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "scores.pop(\"gill\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
